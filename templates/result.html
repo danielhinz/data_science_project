@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        /* Add some basic styling for the dataframe */
+        .dataframe {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        .dataframe, .dataframe th, .dataframe td {
+            border: 1px solid black;
+        }
+        .dataframe th, .dataframe td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>You selected: {{ selected_option }}</h2>
+    
+    <h3>Here is the data:</h3>
+    <div>
+        <!-- Display the dataframe -->
+        {{ table | safe }}
+    </div>
+</body>
+</html>

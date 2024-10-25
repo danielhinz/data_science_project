@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select an Option and Date</title>
+</head>
+<body>
+    <h2>Select an Option and a Date</h2>
+    
+    <!-- Dropdown form to send the selection to /dataframe -->
+    <form action="/submit" method="POST">
+        <!-- First Dropdown (Options) -->
+        <label for="dropdown">Choose an option:</label>
+        <select name="dropdown" id="dropdown" required>
+            <option value="" disabled selected>Select an option</option>
+            {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <!-- Second Dropdown (Dates) -->
+        <label for="date">Choose a date:</label>
+        <select name="date" id="date" required>
+            <option value="" disabled selected>Select a date</option>
+            {% for date in dates %}
+                <option value="{{ date }}">{{ date }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

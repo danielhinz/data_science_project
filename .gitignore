@@ -1,0 +1,14 @@
+/.env
+/chromedriverwin64
+/data_sources.json
+/images_cafeteria_623
+/images_cafeteria_724
+/menus_cafeteria_623.xlsx
+/menus_cafeteria_724.xlsx
+/pretty.html
+/pretty.txt
+/scraper_old.py
+/spotify_api.py
+/starwars_testing.ipynb
+/test_4.ipynb
+/__pycache__
