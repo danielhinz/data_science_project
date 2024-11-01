@@ -21,12 +21,36 @@
     </style>
 </head>
 <body>
-    <h2>You selected: {{ selected_option }}</h2>
+    <h2>Mensa: {{ selected_option }}</h2>
+    <h2>Date: {{ selected_date }}</h2>
     
-    <h3>Here is the data:</h3>
+    <h3>Dishes for the day:</h3>
     <div>
-        <!-- Display the dataframe -->
-        {{ table | safe }}
-    </div>
+        {% for tab in table_dish %}
+            <div>
+                <h4>{{tab["menuLine"]}}</h4>
+                <div>{{tab["menu"]}}</div>
+                <div>{{tab["studentPrice"]}}</div>
+            </div>
+        {% endfor %}
+    </div>       
+    <div>
+        {% for tab in table_dish_vegan %}
+            <div>
+                <h4>{{tab["menuLine"]}}</h4>
+                <div>{{tab["menu"]}}</div>
+                <div>{{tab["studentPrice"]}}</div>
+            </div>
+        {% endfor %}
+    </div> 
+    <div>
+        {% for tab in table_dish_veget %}
+            <div>
+                <h4>{{tab["menuLine"]}}</h4>
+                <div>{{tab["menu"]}}</div>
+                <div>{{tab["studentPrice"]}}</div>
+            </div>
+        {% endfor %}
+    </div>       
 </body>
 </html>

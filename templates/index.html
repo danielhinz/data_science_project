@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select an Option and Date</title>
+    <title>Select a Mensa and Date</title>
 </head>
 <body>
-    <h2>Select an Option and a Date</h2>
+    <h2>Select a Mensa and a Date</h2>
     
     <!-- Dropdown form to send the selection to /dataframe -->
     <form action="/submit" method="POST">
         <!-- First Dropdown (Options) -->
-        <label for="dropdown">Choose an option:</label>
+        <label for="dropdown">Choose an Mensa:</label>
         <select name="dropdown" id="dropdown" required>
-            <option value="" disabled selected>Select an option</option>
+            <option value="" disabled selected>Select a mensa</option>
             {% for option in options %}
                 <option value="{{ option }}">{{ option }}</option>
             {% endfor %}
@@ -22,9 +22,9 @@
         <br><br>
 
         <!-- Second Dropdown (Dates) -->
-        <label for="date">Choose a date:</label>
+        <label for="date">Choose a Date:</label>
         <select name="date" id="date" required>
-            <option value="" disabled selected>Select a date</option>
+            <option value="" disabled selected>Select a Date</option>
             {% for date in dates %}
                 <option value="{{ date }}">{{ date }}</option>
             {% endfor %}
